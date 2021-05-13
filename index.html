@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="コーディング中級編">
+  <meta name="robots" content="noindex">
   <link rel="icon" type="image/x-icon" href="img/Logo.jpg">
   <title>ユアコーディング</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -37,20 +38,28 @@
                 <a href="#contact" class="nav__link">お問い合わせ</a><!-- /.nav__link -->
               </li><!-- /.nav__item -->
             </ul><!-- /.nav__menu -->
-        <div class="nav-wrapper"><!-- ②ナビゲーションメニュー -->
-        <nav class="header-nav">
-          <ul class="nav-list">
-            <li class="nav-item"><a href="#feature">特徴</a></li>
-            <li class="nav-item"><a href="#price">価格</a></li>
-            <li class="nav-item"><a href="#contact">お問い合わせ</a></li>
-          </ul>
-        </nav>
-      </div>
-            <div class="burger-btn"><!-- ハンバーガーボタン -->
-              <span class="bar bar_top"></span>
-              <span class="bar bar_mid"></span>
-              <span class="bar bar_bottom"></span>
+            
+            <!-- ハンバーガーメニュー -->
+        <div class="global-nav-bar-wrapper">
+          <div id="nav-toggle" class="nav-toggle">
+            <div class="nav-toggle__wrap">
+              <span class="nav-toggle__bar nav-toggle__bar-top"></span>
+              <span class="nav-toggle__bar nav-toggle__bar-middle"></span>
+              <span class="nav-toggle__bar nav-toggle__bar-bottom"></span>
             </div>
+          </div>
+          
+          <div class="global-nav-wrapper">
+            <nav class="global-nav">
+              <ul class="global-nav__menu">
+                <li class="global-nav__menu_item"><a href="#feature" class="global-nav__menu_link">特徴</a></li>
+                <li class="global-nav__menu_item"><a href="#price" class="global-nav__menu_link">価格</a></li>
+                <li class="global-nav__menu_item"><a href="#contact" class="global-nav__menu_link">お問い合わせ</a></li>
+              </ul>
+            </nav>
+          </div><!-- /#global-nav -->
+      </div>
+            
           </nav><!-- /.nav -->
         <!-- </div> -->
         <div class="contact__btn contact__btn_nav">
@@ -73,6 +82,7 @@
           助けになります
         </p><!-- /.mv__desc -->
         <a href="#contact" class="mv__container_btn btn">お問い合わせ</a><!-- /.btn -->
+        <img src="img/manager.png" alt="manager" class="mv__container_img">
           </div><!-- /.mv__container -->
             <!-- <img src="img/manager.png" alt="manager" class="mv__img_man"> -->
       </div><!-- /.inner -->
