@@ -133,4 +133,4 @@ $('[type="submit"]').on('click', function(){
 	});
 
 	
-})(jQuery);
+});
