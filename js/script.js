@@ -1,19 +1,16 @@
 $(function () {
 
-	$('.burger-btn').on('click',function(){
-		$('.burger-btn').toggleClass('close');
-		$('.nav-wrapper').fadeToggle(500);
-		$('body').toggleClass('noscroll');
+	// ハンバーガーメニュー
+	$(function () {
+		$('#nav-toggle').on('click', function() {
+			$('body').toggleClass('open');
+		});
+		$('.global-nav__menu_link').on('click', function(event) {
+			$('body').toggleClass('open');
+	});
 	});
 
-	$('.toggle_title').click(function () {
-		$(this).toggleClass('selected');
-		$(this).next().slideToggle();
-	});
 
-	$('.nav-item a[href]').on('click', function(event) {
-    $('.burger-btn').trigger('click');
-});
 
 	// slider
 	var swiper = new Swiper('.swiper-container', {
@@ -126,7 +123,14 @@ $('[type="submit"]').on('click', function(){
 			$("html, body").animate({scrollTop:position}, speed, "swing");
 			return false;
 		});
+
+		$('a[href^=#]:not([href=#])').click(function () {
+			var target = $($(this).attr('href')).offset().top;
+			target -= -70;
+			$('html, body').animate({ scrollTop: target }, 500);
+			return fa
+		});
 	});
 
 	
-});
+})(jQuery);
